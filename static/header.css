@@ -8,18 +8,23 @@
 
 header{
 	background: black;
+	width: 100%;
 }
 
-li{
+.navba ul{
+	margin-top: auto;
+}
+
+.nav-menu ul li{
 	list-style: none;
 }
 
-a{
+.navba a{
 	color: white;
 	text-decoration: none;
 }
 
-.navbar{
+.navba{
 	min-height: 70px;
 	display: flex;
 	justify-content: space-between;
@@ -27,23 +32,23 @@ a{
 	padding: 0 24px;
 }
 
-.nav-menu{
+.navba .nav-menu{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 60px;
 }
 
-.nav-branding{
+.navba .nav-branding{
 	font-size: 2rem;
 }
 
-.nav-link{
+.navba .nav-link{
 	font-family: 'Arima', cursive;
 	transition: 0.7s ease;
 }
 
-.nav-link:hover{
+.navba .nav-link:hover{
 	color: orange;
 }
 
@@ -82,8 +87,9 @@ a{
 	.nav-menu{
 		position: fixed;
 		left: -100%;
+		z-index: 1000;
 		top: 70px;
-		gap: 0;
+		gap: 0 !important;
 		flex-direction: column;
 		background-color: black;
 		width: 100%;
