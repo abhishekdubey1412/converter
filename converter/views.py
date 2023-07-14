@@ -1,8 +1,26 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def aboutUS(request):
-    return HttpResponse("<h1>Hello About</h1>")
-
 def Home(request):
-    return render(request, "main.html")
+    data = {
+        'title':"Responsive Navigation Bar"
+    }
+    return render(request, "index.html",data)
+
+def PDFJPG(request):
+    data = {
+        'title':"PDF TO JPG"
+    }
+    return render(request, "pdf_to_jpg.html",data)
+
+def JPGPNG(request):
+    data = {
+        'title':"JPG TO PNG"
+    }
+    return render(request, "jpg-to-png.html",data)
+
+def YOUTUBE(request):
+    data = {
+        'title':"Youtube Downloader"
+    }
+    return render(request, "yt_down.html",data)

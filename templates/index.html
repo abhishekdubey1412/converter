@@ -1,4 +1,5 @@
-{% include "header.html" %}
+{% extends 'base.html' %}
+{% block content %}
 <div class="container-lg">
   <div class="card-group">
     <div class="card">
@@ -7,7 +8,7 @@
         <h5 class="card-title">Youtube Downloader</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
           This content is a little bit longer.</p>
-        <a href='yt_down.html' target="_blank">
+        <a href='/youtube_downloader'>
           <button type="button" class="btn btn-primary">Download</button>
         </a>
       </div>
@@ -17,7 +18,7 @@
       <div class="card-body">
         <h5 class="card-title">JPG to PNG Converter</h5>
         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <a href='jpg-to-png.html' target="_blank">
+        <a href='/jpg-to_png'>
           <button type="button" class="btn btn-primary">Converter</button>
         </a>
       </div>
@@ -28,13 +29,11 @@
         <h5 class="card-title">PDF to JPG and PNG Converter</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
           This card has even longer content than the first to show that.</p>
-        <a href='pdf_to_jpg.html' target="_blank">
+        <a href='/pdf_to_jpg'>
           <button type="button" class="btn btn-primary">Converter</button>
         </a>
       </div>
     </div>
   </div>
 </div>
-{% include "footer.html" %}
-</body>
-</html>
+{% endblock  %}

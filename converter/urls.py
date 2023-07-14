@@ -20,5 +20,8 @@ from converter import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.Home)
+    path("", views.Home),
+    path("pdf_to_jpg/", views.PDFJPG),
+    path("jpg-to_png/", views.JPGPNG),
+    path("youtube_downloader/", views.YOUTUBE),
 ]
