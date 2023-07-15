@@ -24,4 +24,5 @@ urlpatterns = [
     path("pdf_to_jpg/", views.PDFJPG),
     path("jpg-to_png/", views.JPGPNG),
     path("youtube_downloader/", views.YOUTUBE),
+    path("404_page/", views.NotFound),
 ]

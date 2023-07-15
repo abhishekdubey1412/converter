@@ -24,3 +24,6 @@ def YOUTUBE(request):
         'title':"Youtube Downloader"
     }
     return render(request, "yt_down.html",data)
+
+def NotFound(request):
+    return render(request, '404_templet.html')
