@@ -5,11 +5,12 @@
       <h1 class="centered-heading" style="text-align: center; margin-top: 20px">YouTube Downloader</h1>
       <hr class="centered-hr">
     </div>
-    <div class="input-group mb-3" style="width:60%; margin:40px auto 0 auto">
-      <input type="text" class="form-control" placeholder="Enter YouTube link" aria-label="Recipient's username"
+    <form class="input-group mb-3" style="width:60%; margin:40px auto 0 auto" method="post">
+      {% csrf_token %}
+      <input type="text" class="form-control" name="yt_link" placeholder="Enter YouTube link" aria-label="Recipient's username"
         aria-describedby="button-addon2">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Download</button>
-    </div>
+      <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Download</button>
+    </form>
     <div class="container">
       <div class="content-container">
         <img src="/static/Image/thumbnail.png" class="large-image" alt="...">

@@ -1,5 +1,5 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+from converter import mod
 
 def Home(request):
     data = {
@@ -20,10 +20,20 @@ def JPGPNG(request):
     return render(request, "jpg-to-png.html",data)
 
 def YOUTUBE(request):
+    link = ''
+    try:
+        link = request.POST['yt_link']
+    except:
+        pass
     data = {
         'title':"Youtube Downloader"
     }
+    
+    if link != '':
+        mod.youtube_downloader(link)
+    else:
+        pass
     return render(request, "yt_down.html",data)
 
 def NotFound(request):
-    return render(request, '404_templet.html')
+    return render(request, '404.html')
